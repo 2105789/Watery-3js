@@ -9,8 +9,10 @@ uniform float time;
   }
 
   vec4 taylorInvSqrt(vec4 r) {
+    //return sqrt(1/r); 
     return 1.79284291400159 - 0.85373472095314 * r;
   }
+
 
   float perlinNoise(vec2 P) {
     vec4 Pi = floor(P.xyxy) + vec4(0.0, 0.0, 1.0, 1.0);

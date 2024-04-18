@@ -96,7 +96,8 @@ const floorResolution = 128; // Adjust this value to control the resolution of t
 const floorGeometry = new THREE.PlaneBufferGeometry(floorWidth, floorHeight, floorResolution, floorResolution);
 
 function random(min, max) {
-  return (Math.random() * (max - min) + min, Math.random() * (max - min) + min, Math.random() * (max - min) + min);
+  return (Math.random() * (max - min) + min, Math.random() * 
+  (max - min) + min, Math.random() * (max - min) + min);
 }
 
 const objLoader = new THREE.OBJLoader();
@@ -126,7 +127,7 @@ const rockLoaded = new Promise((resolve) => {
       rock.scale(scale, scale, scale);
 
       const rotationZ = Math.random() * Math.PI * 2;
-      rock.rotateZ(rotationZ);
+      //rock.rotateZ(rotationZ);
 
       rocks.push(rock);
     }
@@ -352,6 +353,10 @@ class Caustics {
         transparent: true,
       });
 
+      //if(!gl.getShaderParameter(currentDepth, gl.COMPILE_STATUS)){
+        //alert(gl.getShaderInfoLog(currentDepth));
+      //  }
+  
       this._waterMaterial.blending = THREE.CustomBlending;
 
       // Set the blending so that:
@@ -836,9 +841,6 @@ function animate() {
     caustics.setTextures(waterTexture, environmentMapTexture);
     caustics.render(renderer);
     const causticsTexture = caustics.target.texture;
-
-    // debug.draw(renderer, environmentMapTexture);
-    // debug.draw(renderer, causticsTexture);
 
     environment.updateCaustics(causticsTexture);
     // Update the score text

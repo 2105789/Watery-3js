@@ -30,8 +30,8 @@ void main() {
 
     // Calculate wave displacement with independent summations of sine functions
     float waveX = 0.0;
-    waveX += sin(position.x * 3.12 + time * .2) * 0.01;
     waveX += sin((position.x + time) * 2.5 + time * 0.8 ) * 0.005;
+    waveX += sin(position.x * 3.12 + time * .2) * 0.01;
     waveX += sin((position.x - time) * 2.0 + time * 0.01) * 0.025;
 
     float waveY = 0.0;
