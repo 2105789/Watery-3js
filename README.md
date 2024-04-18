@@ -2,6 +2,8 @@
 
 Welcome to the ThreeJS Caustics project! This project showcases a stunning water simulation with realistic caustics and environmental reflections. It demonstrates the power of Three.js, a popular JavaScript 3D library, in creating visually captivating and interactive scenes.
 
+![ThreeJS Caustics](https://raw.githubusercontent.com/87nehal/Watery-3js/main/assets/image.png)
+
 ## Features
 
 - Realistic water simulation with dynamic waves and ripples
