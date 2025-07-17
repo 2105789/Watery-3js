@@ -1,0 +1,53 @@
+{
+  "name": "threejs-caustics-optimized",
+  "version": "1.0.0",
+  "description": "Performance-optimized ThreeJS water simulation with caustics rendering",
+  "main": "index-optimized.js",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "node build.js",
+    "analyze": "node build.js --analyze",
+    "serve": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "threejs",
+    "webgl",
+    "water-simulation",
+    "caustics",
+    "performance",
+    "optimization",
+    "3d",
+    "graphics"
+  ],
+  "author": "Performance Optimized",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ThreeJS-Caustics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/ThreeJS-Caustics/issues"
+  },
+  "homepage": "https://github.com/your-username/ThreeJS-Caustics#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "files": [
+    "index-optimized.html",
+    "index-optimized.js",
+    "module/",
+    "assets/",
+    "shaders/",
+    "performance-analysis.js",
+    "build.js",
+    "OPTIMIZATION_GUIDE.md"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ThreeJS Caustics</title>
+    <title>ThreeJS Caustics - Optimized</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Optimized ThreeJS water simulation with caustics">
     
     <!-- Resource hints for faster loading -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -10,7 +11,7 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/three@v0.117.0" as="script">
-    <link rel="preload" href="index.js" as="script">
+    <link rel="preload" href="index-optimized.js" as="script">
     
     <!-- Optimized script loading with async/defer -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/three@v0.117.0" async></script>
@@ -22,7 +23,10 @@
 
   <body>
     <canvas id="canvas"></canvas>
-    <script type="text/javascript" src="index.js" defer></script>
+    <div id="loading" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Arial, sans-serif; font-size: 18px; color: #333;">
+      Loading optimized water simulation...
+    </div>
+    <script type="text/javascript" src="index-optimized.js" defer></script>
   </body>
   <style>
     * {
@@ -37,6 +41,18 @@
       image-rendering: -moz-crisp-edges;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: optimize-contrast;
+      will-change: transform;
+    }
+    
+    /* Performance optimizations */
+    body {
+      overflow: hidden;
+      background: #000;
+    }
+    
+    /* Hide loading screen when app is ready */
+    .loaded #loading {
+      display: none;
     }
   </style>
 </html>
