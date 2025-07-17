@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ThreeJS Caustics</title>
+    <title>ThreeJS Caustics - Optimized</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Optimized ThreeJS Water Simulation with Caustics">
+    <meta name="description" content="Performance-optimized ThreeJS Water Simulation with Caustics">
     
     <!-- Resource hints for faster loading -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -11,7 +11,7 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/three@v0.117.0" as="script">
-    <link rel="preload" href="index.js" as="script">
+    <link rel="preload" href="index-optimized.js" as="script">
     
     <!-- Load Three.js with async -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/three@v0.117.0" async></script>
@@ -23,7 +23,7 @@
 
   <body>
     <canvas id="canvas"></canvas>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index-optimized.js"></script>
   </body>
   <style>
     * {
@@ -38,6 +38,12 @@
       image-rendering: -moz-crisp-edges;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: optimize-contrast;
+    }
+    
+    /* Optimize body for performance */
+    body {
+      overflow: hidden;
+      background: #000;
     }
   </style>
 </html>
